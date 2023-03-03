@@ -1,0 +1,205 @@
+import simplegui
+global x
+global y
+global explode
+y=0
+x= 50
+radius = 15
+def draw_handler(canvas):
+    global x
+    global y
+    global explode
+    global radius
+    explode = 1
+    
+    if x<570:
+        x += 3
+        explode += 3
+      
+        #canvas.draw_circle((x, 300), 50, 1,"Black","yellow" )
+        #canvas.draw_circle((x - 100, 300), 50, 1,"Black","red" )
+        #canvas.draw_circle((x, 400), 50, 1,"Black","White" )
+        canvas.draw_line((24, 48), (24, 600), 1,"White" )
+        canvas.draw_line((240, 48), (240, 600), 1,"White" )
+        canvas.draw_line((72, 48), (72, 600), 1,"White" )
+        canvas.draw_line((138, 48), (138, 600), 1,"White" )
+        canvas.draw_line((186, 48), (186, 600), 1,"White" )
+        canvas.draw_line((24, 400), (248, 400), 1,"White" )
+        canvas.draw_line((24, 450), (248, 450), 1,"White" )
+        canvas.draw_line((24, 500), (248, 500), 1,"White" )
+        canvas.draw_line((24, 550), (248, 550), 1,"White" )
+        canvas.draw_line((24, 350), (248, 350), 1,"White" )
+        canvas.draw_line((24, 300), (248, 300), 1,"White" )
+        canvas.draw_line((24,250), (248,250), 1,"White" )
+        canvas.draw_line((24, 200), (248, 200), 1,"White" )
+        canvas.draw_line((24, 150), (248, 150), 1,"White" )
+        canvas.draw_line((24, 100), (248, 100), 1,"White" )
+        canvas.draw_line((24, 50), (248, 50), 1,"White" )
+        canvas.draw_circle((x - 100, 550), 50, 1,"Black","red" ) 
+        canvas.draw_circle((x - 300, 550), 50, 1,"Black","red" ) 
+        canvas.draw_line((x -100, 500), (x -300, 500), 1,"White" )
+        canvas.draw_line((x -10, 600), (x -100, 500), 1,"White" )
+        canvas.draw_line((x -100, 500), (x - 100, 450), 1,"White" )
+        canvas.draw_line((x -100, 450), (x - 250, 450), 1,"White" )
+        canvas.draw_line((x -250, 500), (x - 250, 450), 1,"White" )
+        canvas.draw_line((x -120, 400), (x - 120, 450), 1,"White" )
+        canvas.draw_line((x -115, 405), (x - 115, 460), 1,"White" )
+        canvas.draw_line((x -50, 400), (x - 150, 460), 1,"White" )
+        canvas.draw_line((x -115, 405), (x - 115, 460), 1,"White" )  
+        canvas.draw_point([300, 300], "yellow")
+        canvas.draw_line((x -115, 400), (x - 215, 400), 1,"White" )
+        canvas.draw_line((x -200, 400), (x - 200, 460), 1,"White" )
+        canvas.draw_polygon([(552, 456), (552,656), (552,556),(552,556)],7, "green")
+        canvas.draw_polygon([(550, 500), (575,500), (500,450)],1, "white", "green")
+        canvas.draw_polygon([(48, 50), (72,60), (50,50)],1, "white", "Black")
+        canvas.draw_polygon([(600, 600), (600,600), (600,600), (600,600)],1, "green")
+        canvas.draw_polygon([(576, 576), (576,576), (576,576), (576,576)],1, "green")
+        canvas.draw_circle((550, 596), 20, 10, "White", "White")
+         
+        canvas.draw_circle((550, 586), 20, 10, "White", "White") 
+    
+        canvas.draw_circle((550, 586), 20, 10, "White", "White") 
+    
+    if x > 569:
+        x=570
+        canvas.draw_polygon([(0, 0), (0, 600), (600, 600), (600, 0), (0, 0)], 1, "black", "black")
+        y=y+5
+        explode += 3
+
+        
+        canvas.draw_line((24, 48), (24, 600), 1,"White" )
+        canvas.draw_line((240, 48), (240, 600), 1,"White" )
+        canvas.draw_line((72, 48), (72, 600), 1,"White" )
+        canvas.draw_line((138, 48), (138, 600), 1,"White" )
+        canvas.draw_line((186, 48), (186, 600), 1,"White" )
+        canvas.draw_line((24, 400), (248, 400), 1,"White" )
+        canvas.draw_line((24, 450), (248, 450), 1,"White" )
+        canvas.draw_line((24, 500), (248, 500), 1,"White" )
+        canvas.draw_line((24, 550), (248, 550), 1,"White" )
+        canvas.draw_line((24, 350), (248, 350), 1,"White" )
+        canvas.draw_line((24, 300), (248, 300), 1,"White" )
+        canvas.draw_line((24,250), (248,250), 1,"White" )
+        canvas.draw_line((24, 200), (248, 200), 1,"White" )
+        canvas.draw_line((24, 150), (248, 150), 1,"White" )
+        canvas.draw_line((24, 100), (248, 100), 1,"White" )
+        canvas.draw_line((24, 50), (248, 50), 1,"White" )
+        canvas.draw_circle((x - 100, 550), 50, 1,"Black","red" ) 
+        canvas.draw_circle((x - 300, 550), 50, 1,"Black","red" ) 
+        #tank
+        canvas.draw_line((x -100, 500), (x -300, 500-y), 1,"White" )
+        canvas.draw_line((x -10, 600), (x -100, 500-y), 1,"White" )
+        canvas.draw_line((x -100, 500), (x - 100, 450-y), 1,"White" )
+        canvas.draw_line((x -100, 450), (x - 250, 450-y), 1,"White" )
+        canvas.draw_line((x -250, 500), (x - 250, 450-y), 1,"White" )
+        canvas.draw_line((x -120, 400), (x - 120, 450-y), 1,"White" )
+        canvas.draw_line((x -115, 405), (x - 115, 460-y), 1,"White" )
+        canvas.draw_line((x -50, 400), (x - 150, 460-y), 1,"White" )
+        canvas.draw_line((x -115, 405), (x - 115, 460-y), 1,"White" )  
+        canvas.draw_circle((x - 100, 550), 50, 1,"Black","red" )
+        for i in range(0, 600, 10):
+            canvas.draw_circle((i, 3), 3, 1, "blue")
+            
+        canvas.draw_line((24, 150), (148, 150), 1,"White" )
+        canvas.draw_line((24, 100), (148, 100), 1,"White" )
+        canvas.draw_line((24,150), (148,150), 1,"White" )
+        canvas.draw_line((24, 100), (148, 100), 1,"White" )
+        canvas.draw_circle((x - 400, 550), 50, 1,"Black","red" ) 
+        canvas.draw_line((24, 48), (24, 600), 1,"White" )
+        canvas.draw_line((240, 48), (240, 600), 1,"White" )
+        canvas.draw_line((72, 408), (72, 600), 1,"White" )
+        canvas.draw_line((138, 408), (338, 600), 1,"White" )
+       # canvas.draw_line((186, 408), (486, 600), 3,"White" )
+        canvas.draw_line((24, 500), (348, 500), 3,"White" )
+       # canvas.draw_line((24, 550), (348, 550), 3,"White" )
+        canvas.draw_line((300, 408), (400, 600), 3,"White" )
+        canvas.draw_line((138, 408), (338, 600), 3,"White" )
+        canvas.draw_line((400, 408), (400, 600), 3,"White" )
+       # canvas.draw_line((438, 408), (338, 600), 3,"White" )
+        canvas.draw_line((204, 500), (348, 600), 3,"White" )
+        #canvas.draw_line((204, 550), (448, 550), 3,"White" )
+        canvas.draw_line((300, 508), (500, 600), 3,"White" )
+      
+      
+      
+        canvas.draw_circle((550, 596), 200, 100, "White", "White")
+         
+        canvas.draw_circle((550, 586), 20, 10, "White", "White") 
+    
+        canvas.draw_circle((550, 586), 20, 10, "White", "White") 
+       
+        
+    
+        
+        for i in range (1,101,1):
+            explode = explode + 1
+            if(explode % 2 != 0):
+                color = "yellow"
+            else:
+                color = "orange"
+            canvas.draw_circle((400, 500), explode, 1, color, "red")
+        if y >= 600:
+        
+            canvas.draw_polygon([(0, 0), (0, 600), (600, 600), (600, 0), (0, 0)], 1, "black", "black")
+            
+            explode += 3
+    
+            
+            canvas.draw_line((24, 48), (24, 600), 1,"White" )
+            canvas.draw_line((240, 48), (240, 600), 1,"White" )
+            canvas.draw_line((72, 48), (72, 600), 1,"White" )
+            canvas.draw_line((138, 48), (138, 600), 1,"White" )
+            canvas.draw_line((186, 48), (186, 600), 1,"White" )
+            canvas.draw_line((24, 400), (248, 400), 1,"White" )
+            canvas.draw_line((24, 450), (248, 450), 1,"White" )
+            canvas.draw_line((24, 500), (248, 500), 1,"White" )
+            canvas.draw_line((24, 550), (248, 550), 1,"White" )
+            canvas.draw_line((24, 350), (248, 350), 1,"White" )
+            canvas.draw_line((24, 300), (248, 300), 1,"White" )
+            canvas.draw_line((24,250), (248,250), 1,"White" )
+            canvas.draw_line((24, 200), (248, 200), 1,"White" )
+            canvas.draw_line((24, 150), (248, 150), 1,"White" )
+            canvas.draw_line((24, 100), (248, 100), 1,"White" )
+            canvas.draw_line((24, 50), (248, 50), 1,"White" )
+            canvas.draw_circle((x - 100, 550), 50, 1,"Black","red" ) 
+            canvas.draw_circle((x - 300, 550), 50, 1,"Black","red" ) 
+            # canvas.draw_line((186, 408), (486, 600), 3,"White" )
+            canvas.draw_line((24, 500), (348, 500), 3,"White" )
+       # canvas.draw_line((24, 550), (348, 550), 3,"White" )
+            canvas.draw_line((300, 408), (400, 600), 3,"White" )
+            canvas.draw_line((138, 408), (338, 600), 3,"White" )
+            canvas.draw_line((400, 408), (400, 600), 3,"White" )
+       # canvas.draw_line((438, 408), (338, 600), 3,"White" )
+            canvas.draw_line((204, 500), (348, 600), 3,"White" )
+        #canvas.draw_line((204, 550), (448, 550), 3,"White" )
+            canvas.draw_line((300, 508), (500, 600), 3,"White" )
+      
+           
+           
+            
+           
+           
+           
+           
+            #tank
+            #canvas.draw_line((x -100, 500), (x -300, 500-y), 1,"White" )
+            #canvas.draw_line((x -10, 600), (x -100, 500-y), 1,"White" )
+            #canvas.draw_line((x -100, 500), (x - 100, 450-y), 1,"White" )
+            #canvas.draw_line((x -100, 450), (x - 250, 450-y), 1,"White" )
+            #canvas.draw_line((x -250, 500), (x - 250, 450-y), 1,"White" )
+            #canvas.draw_line((x -120, 400), (x - 120, 450-y), 1,"White" )
+            #canvas.draw_line((x -115, 405), (x - 115, 460-y), 1,"White" )
+            #canvas.draw_line((x -50, 400), (x - 150, 460-y), 1,"White" )
+           # canvas.draw_line((x -115, 405), (x - 115, 460-y), 1,"White" )  
+            #canvas.draw_circle((x - 100, 550), 50, 1,"Black","red" )
+            for i in range(0, 600, 10):
+                canvas.draw_circle((i, 3), 3, 1, "blue")
+            
+           
+          
+          
+
+
+frame = simplegui.create_frame("Dots", 400, 400)
+frame = simplegui.create_frame('Testing', 600, 600)
+frame.set_canvas_background("Black")
+frame.set_draw_handler(draw_handler)
